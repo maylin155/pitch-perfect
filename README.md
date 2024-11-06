@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pitch Perfect
 
-## Getting Started
+**Pitch Perfect** is a platform that enables users to showcase their pitches, connect with like-minded individuals, and share creative ideas. Users can log in with GitHub, submit pitch details, and view and manage their profile.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **GitHub Authentication**: Secure login through GitHub with Auth.js, allowing users to quickly create accounts and sign in.
+- **Submit Pitches**: Users can submit their pitch details, including a title, description, and image, to share with the community.
+- **Profile Management**: Users can view their personal profile, edit details, and manage their submissions.
+- **Error Tracking**: Sentry integration for robust error tracking, helping to quickly identify and resolve issues.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 15**: A powerful React framework for creating optimized, server-rendered applications.
+- **Auth.js**: Provides authentication solutions with various providers, enabling secure, scalable sign-in functionality.
+- **Sanity**: A headless CMS that allows for easy management of pitch content and profile data, with a powerful query engine and flexible structure.
+- **Sentry**: Real-time error tracking to monitor and fix errors and performance issues in production.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
+Login: Navigate to the login page and sign in with GitHub to access your account.
+Submit a Pitch: After logging in, you can create a new pitch by providing details such as title, description, and an image.
+View Profile: Access your profile page to view your information and manage your submitted pitches.
 
-## Learn More
+## Libraries and Dependencies
+Next.js 15: For server-side rendering, API routes, and overall app structure.
+Auth.js: For managing authentication flows with GitHub.
+Sanity: For CMS and data management.
+Sentry: For error tracking and monitoring.
 
-To learn more about Next.js, take a look at the following resources:
+Visit [https://pitchperfect-nextjs.vercel.app/](url) for live demo.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Screenshot from 2024-11-07 03-30-38](https://github.com/user-attachments/assets/0752e019-50dc-444e-a37f-c489076289ca)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Screenshot from 2024-11-07 03-31-21](https://github.com/user-attachments/assets/400f3d04-f5cc-49bb-b1e0-1846007e375c)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Screenshot from 2024-11-07 03-31-48](https://github.com/user-attachments/assets/6c23c26b-6dbb-4c11-8ba0-595578ae4bf7)
