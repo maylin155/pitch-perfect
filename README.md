@@ -29,8 +29,14 @@ Sentry: For error tracking and monitoring.
 
 Visit [https://pitchperfect-nextjs.vercel.app/](url) for live demo.
 
+
+## Home Page
 ![Screenshot from 2024-11-07 03-30-38](https://github.com/user-attachments/assets/0752e019-50dc-444e-a37f-c489076289ca)
 
+
+## Details Page
 ![Screenshot from 2024-11-07 03-31-21](https://github.com/user-attachments/assets/400f3d04-f5cc-49bb-b1e0-1846007e375c)
 
+
+## Submit Page
 ![Screenshot from 2024-11-07 03-31-48](https://github.com/user-attachments/assets/6c23c26b-6dbb-4c11-8ba0-595578ae4bf7)
