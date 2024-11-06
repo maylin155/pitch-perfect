@@ -16,11 +16,10 @@ export const experimental_ppr = true;
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
     const id = (await params).id;
 
-    const [posts, {select: editorPosts}] = await Promise.all([
+    const [posts, { select: editorPosts }] = await Promise.all([
         client.fetch(DETAILS_QUERY, { id }),
         client.fetch(PLAYLIST_BY_SLUG_QUERY, { slug: 'editor-picks' })
     ])
-
     const md = markdownit();
 
     // const posts = await client.fetch(DETAILS_QUERY, { id });
@@ -33,7 +32,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
     //     return notFound(); // or handle the error appropriately
     // }
 
-    // Access the select array from the fetched playlist
+    // // Access the select array from the fetched playlist
     // const editorPosts = editorPostsResponse.select || []; // Use an empty array as a fallback
 
     if (!posts) return notFound();
@@ -86,18 +85,19 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                         </p>
                     )}
                 </div>
+
                 <hr className="divider" />
 
-                {/* TODO: EDITOR SELECTED STARTUPS */}
+                {/* Aligned Editor Picks Section */}
                 {editorPosts.length > 0 && (
-                    <div className="max-w-4xl mx-auto">
-                        <p className="text-30-semibold">Editor Picks</p>
-                        <ul className="mt-7 card_grid-sm">
-                            {editorPosts.map((post: StartupTypeCard) => (
-                                <StartupCard key={post._id} post={post} />
-                            ))}
-                        </ul>
-                    </div>
+                   <div className="space-y-5">
+                   <p className="text-30-semibold">Editor Picks</p>
+                   <ul className="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                       {editorPosts.map((post: StartupTypeCard) => (
+                           <StartupCard key={post._id} post={post} />
+                       ))}
+                   </ul>
+               </div>
                 )}
 
                 <Suspense fallback={<Skeleton className="view_skeleton" />}>
@@ -105,6 +105,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 </Suspense>
             </section>
         </>
+
     );
 };
 
